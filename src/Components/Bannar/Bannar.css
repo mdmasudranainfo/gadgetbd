@@ -1,0 +1,40 @@
+.bannar .slick-prev,
+.bannar .slick-next {
+  background: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bannar .slick-prev,
+.bannar .slick-next:hover {
+  background: #ff3f3f;
+  color: white;
+}
+
+.bannar .slick-prev {
+  left: 63px;
+  z-index: 10;
+}
+.bannar .slick-next {
+  right: 63px;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 500px) {
+  .bannar .slick-prev,
+  .bannar .slick-next {
+    /* display: none !important; */
+    width: 30px;
+    height: 30px;
+  }
+  .bannar .slick-prev {
+    left: 10px;
+    z-index: 10;
+  }
+  .bannar .slick-next {
+    right: 10px;
+    z-index: 10;
+  }
+}

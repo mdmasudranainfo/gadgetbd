@@ -1,0 +1,9 @@
+.bannar2 {
+  background-image: url(../../assets/image/bannar2Bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  max-height: 100%;
+  margin-top: -200px;
+}

@@ -1,0 +1,4 @@
+.box:hover .icone {
+  background-color: #091e66;
+  transform: rotate(-45deg);
+}
