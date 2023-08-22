@@ -5,8 +5,13 @@ import {
   addToCart,
   removeQuantity,
 } from '../../Redux/features/cart/cartSlice'
+import { useEffect } from 'react'
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const { products, totall } = useSelector(state => state.cart)
   const dispatch = useDispatch()
 
@@ -19,14 +24,14 @@ const Cart = () => {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto md:px-0 px-4">
       <h1 className="text-xl mb-5">Shopping Cart</h1>
-      <div className="grid grid-cols-4 gap-5">
-        <div className="col-span-3">
+      <div className="grid md:grid-cols-4 gap-5">
+        <div className="md:col-span-3">
           {products?.map(product => (
             <div
               key={product?.id}
-              className="flex justify-between border rounded-md shadow p-2 mb-3"
+              className="flex md:flex-row flex-col items-center gap-3 justify-between border rounded-md shadow p-2 mb-3"
             >
               <div className="flex items-center gap-2">
                 <img className="w-[80px]" src={product?.image} alt="" />

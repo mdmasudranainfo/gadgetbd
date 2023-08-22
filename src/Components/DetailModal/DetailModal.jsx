@@ -7,9 +7,8 @@ import cash from '../../assets/image/cash.png'
 import pay from '../../assets/image/paywith.png'
 
 const DetailModal = ({ product, setProduct }) => {
-  console.log('prod', product)
   return (
-    <div className="fixed w-screen h-screen top-0 left-0 flex items-center justify-center bg-[#00000088]">
+    <div className="z-30 fixed w-screen h-screen top-0 left-0 flex items-center justify-center bg-[#00000088]">
       <div className="w-[800px]  max-w-full bg-white p-5 rounded-md relative">
         {/* close button start  */}
         <div className="absolute top-5 right-5 cursor-pointer">

@@ -73,7 +73,7 @@ const PopularCategory = () => {
         </div>
 
         <div className="">
-          <div className="pt-[147px] pb-[77px] px-[28px] bg-[#9C648A] flex flex-col justify-center items-center relative rounded-lg box">
+          <div className="h-full px-[28px] bg-[#9C648A] flex flex-col justify-center items-center relative rounded-lg box">
             <div className="absolute top-8 right-8 text-white">
               <Link to="product/Phone">
                 <BsArrowRight className="text-5xl rounded-full  cursor-pointer duration-300 p-2 icone" />

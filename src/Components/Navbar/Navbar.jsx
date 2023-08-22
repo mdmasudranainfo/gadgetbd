@@ -3,12 +3,22 @@ import logo from '../../assets/image/logo.png'
 import { BsCartPlusFill } from 'react-icons/bs'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import './Navbar.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { AuthContext } from '../../Contaxt/UserContext'
+import { toast } from 'react-hot-toast'
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
   const { products } = useSelector(state => state.cart)
+
+  const { user, singOut } = useContext(AuthContext)
+
+  const singOutHandler = () => {
+    singOut().then(() => {
+      toast.success('log out successfully')
+    })
+  }
 
   const menuItems = (
     <>
@@ -37,7 +47,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
           }
-          to="/product"
+          to="/product/laptop"
         >
           Product
         </NavLink>
@@ -68,14 +78,25 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li className="border-b lg:border-none border-green-500 p-1">
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
-          }
-          to="/login"
-        >
-          Login
-        </NavLink>
+        {user?.uid ? (
+          <button
+            onClick={() => singOutHandler()}
+            className={({ isActive }) =>
+              isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+            }
+          >
+            Log Out
+          </button>
+        ) : (
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+            }
+            to="/login"
+          >
+            Login
+          </NavLink>
+        )}
       </li>
     </>
   )

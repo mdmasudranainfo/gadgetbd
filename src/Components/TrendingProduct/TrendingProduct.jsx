@@ -3,16 +3,28 @@ import { useGetTrendingProductQuery } from '../../Redux/api/apiSlice'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import './TrendingProduct.css'
 import heart from '../../assets/image/heart 1.png'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import DetailModal from '../DetailModal/DetailModal'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../Redux/features/cart/cartSlice'
+import { AuthContext } from '../../Contaxt/UserContext'
+import { useNavigate } from 'react-router-dom'
 
 const TrendingProduct = () => {
   const { data: products } = useGetTrendingProductQuery(undefined)
   const [product, setProduct] = useState()
+  const { user } = useContext(AuthContext)
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
+
+  const modalHandler = produc => {
+    if (!user?.uid) {
+      navigate('/login')
+    } else {
+      setProduct(produc)
+    }
+  }
 
   // slider settings
   var settings = {
@@ -95,7 +107,7 @@ const TrendingProduct = () => {
                       Add to cart
                     </button>
                     <button
-                      onClick={() => setProduct(product)}
+                      onClick={() => modalHandler(product)}
                       className="text-[18px] font-bold text-white hover:bg-[#8469A7] bg-[#54426B] duration-300 ease-in w-[125px] py-1 rounded-full"
                     >
                       Details
