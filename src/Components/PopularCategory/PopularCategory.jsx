@@ -11,14 +11,14 @@ import { Link } from 'react-router-dom'
 const PopularCategory = () => {
   return (
     <div className="container mx-auto md:px-0 px-4">
-      <h1 className="text-[35px] text-center font-bold mb-[46px] ">
+      <h1 className="md:text-[35px] text-lg text-center font-bold mb-[46px] ">
         Popular Category
       </h1>
 
       {/* carads start */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2  mb-5 gap-6">
         <div className="">
-          <div className="py-[77px] bg-[#6AC4D8] flex flex-col justify-center items-center relative rounded-lg box box">
+          <div className="py-[77px] md:px-0 px-3 bg-[#6AC4D8] flex flex-col justify-center items-center relative rounded-lg box box">
             <div className="absolute top-6 right-6 text-white">
               <Link to="product/laptop">
                 <BsArrowRight className="text-5xl rounded-full  cursor-pointer duration-300 p-2 icone" />
@@ -61,7 +61,7 @@ const PopularCategory = () => {
               <h1 className="md:text-3xl mt-2">earphone</h1>
             </div>
           </div>
-          <div className="mt-7 py-[53px] bg-[#6AC4D8] flex flex-col justify-center items-center relative rounded-lg box">
+          <div className="mt-7 py-[53px] md:px-0 px-3 bg-[#6AC4D8] flex flex-col justify-center items-center relative rounded-lg box">
             <div className="absolute top-2 right-2 text-white">
               <Link to="product/Television">
                 <BsArrowRight className="text-5xl rounded-full  cursor-pointer duration-300 p-2 icone" />
@@ -73,7 +73,7 @@ const PopularCategory = () => {
         </div>
 
         <div className="">
-          <div className="h-full px-[28px] bg-[#9C648A] flex flex-col justify-center items-center relative rounded-lg box">
+          <div className="h-full px-[28px] md:yt-0 py-5 bg-[#9C648A] flex flex-col justify-center items-center relative rounded-lg box">
             <div className="absolute top-8 right-8 text-white">
               <Link to="product/Phone">
                 <BsArrowRight className="text-5xl rounded-full  cursor-pointer duration-300 p-2 icone" />

@@ -9,12 +9,12 @@ const Footer = () => {
       <div className="flex justify-center">
         <div className="">
           <input
-            className=" md:w-[500px] w-full min-w-[300px]  bg-transparent outline-none border-2 rounded-2xl py-3 pl-5 mb-5 md:text-[27px] text-lg block"
+            className=" md:w-[500px] w-full min-w-[300px] text-white  bg-transparent outline-none border-2 rounded-2xl py-3 pl-5 mb-5 md:text-[27px] text-lg block"
             type="text"
             placeholder="Your email address "
           />
           <input
-            className=" md:w-[500px] w-full min-w-[300px]  bg-transparent outline-none border-2 rounded-2xl py-3 pb-12 pl-5 mb-5 md:text-[27px] text-lg block"
+            className=" md:w-[500px] w-full min-w-[300px] text-white  bg-transparent outline-none border-2 rounded-2xl py-3 pb-12 pl-5 mb-5 md:text-[27px] text-lg block"
             type="text"
             placeholder="Describe your queries ... "
           />

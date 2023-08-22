@@ -5,7 +5,7 @@ import tab from '../../assets/image/tabArrivals.png'
 const NewArrivals = ({ title }) => {
   return (
     <div className="container mx-auto lg:px-0 px-4 mt-[90px]">
-      <h1 className="text-[35px] font-bold mt-[100px] mb-[30px] text-center">
+      <h1 className="text-[35px] font-bold mt-[100px] mb-[40px] text-center">
         {title}
       </h1>
 
@@ -19,7 +19,7 @@ const NewArrivals = ({ title }) => {
 
           {/* list */}
           <div className="mt-[60px]">
-            <ul className="list-disc">
+            <ul className="md:pl-0 pl-3 list-disc text-[#716A6A]">
               <li className="text-[22px] mb-1">
                 Track all your vehicle's location
               </li>
@@ -38,7 +38,7 @@ const NewArrivals = ({ title }) => {
           <div className="mt-14 flex flex-col md:flex-row justify-between">
             <div className="">
               <h2 className="text-[30px] font-bold">Use Case</h2>
-              <ul className="">
+              <ul className="md:pl-0 pl-3 text-[#716A6A] ">
                 <li className="text-[22px] mb-1">
                   Track all your vehicle's location
                 </li>
@@ -48,7 +48,7 @@ const NewArrivals = ({ title }) => {
               </ul>
               <div className="mt-14">
                 <h2 className="text-[30px] font-bold">Charging Time</h2>
-                <ul className="">
+                <ul className="md:pl-0 pl-3 text-[#716A6A] ">
                   <li className="text-[22px] mb-1">
                     Track all your vehicle's location
                   </li>
@@ -57,7 +57,7 @@ const NewArrivals = ({ title }) => {
             </div>
             <div className="">
               <h2 className="text-[30px] font-bold">Use Value</h2>
-              <ul className="">
+              <ul className="md:pl-0 pl-3 text-[#716A6A] ">
                 <li className="text-[22px] mb-1">
                   Track all your vehicle's location
                 </li>
@@ -105,7 +105,7 @@ const NewArrivals = ({ title }) => {
 
           {/* list */}
           <div className="mt-[60px]">
-            <ul className="list-disc">
+            <ul className="md:pl-0 pl-3 list-disc text-[#716A6A]">
               <li className="text-[22px] mb-1">
                 Track all your vehicle's location
               </li>
@@ -124,7 +124,7 @@ const NewArrivals = ({ title }) => {
           <div className="mt-14 flex flex-col md:flex-row justify-between">
             <div className="">
               <h2 className="text-[30px] font-bold">Use Case</h2>
-              <ul className="">
+              <ul className="md:pl-0 pl-3 text-[#716A6A] ">
                 <li className="text-[22px] mb-1">
                   Track all your vehicle's location
                 </li>
@@ -134,7 +134,7 @@ const NewArrivals = ({ title }) => {
               </ul>
               <div className="mt-14">
                 <h2 className="text-[30px] font-bold">Charging Time</h2>
-                <ul className="">
+                <ul className="md:pl-0 pl-3 text-[#716A6A] ">
                   <li className="text-[22px] mb-1">
                     Track all your vehicle's location
                   </li>
@@ -143,7 +143,7 @@ const NewArrivals = ({ title }) => {
             </div>
             <div className="">
               <h2 className="text-[30px] font-bold">Use Value</h2>
-              <ul className="">
+              <ul className="md:pl-0 pl-3 text-[#716A6A] ">
                 <li className="text-[22px] mb-1">
                   Track all your vehicle's location
                 </li>
@@ -160,7 +160,7 @@ const NewArrivals = ({ title }) => {
             </div>
           </div>
         </div>
-        <div className=" md:pr-10 ">
+        <div className=" md:pr-12 ">
           <h1 className="md:text-[75px] text-3xl font-bold mb-5">
             New Product
           </h1>

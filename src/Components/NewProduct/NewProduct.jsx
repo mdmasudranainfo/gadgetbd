@@ -34,11 +34,11 @@ const NewProduct = () => {
   }
 
   return (
-    <div className="container mx-auto mt-[65px]">
+    <div className="container mx-auto md:mt-[65px] mt-5">
       <h1 className="text-[35px] font-bold text-center ">New Product</h1>
       {/* menu start */}
-      <div className="mt-24">
-        <ul className="flex text-[30px] gap-[90px] justify-center flex-wrap">
+      <div className="md:mt-24 mt-5">
+        <ul className="flex md:text-[30px] xl:gap-[90px] lg:gap-11 gap-6 justify-center flex-wrap">
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? 'text-[#069938] ' : ' ')}
@@ -98,7 +98,7 @@ const NewProduct = () => {
           </h1>
         </div>
       )}
-      <div className="grid grid-cols-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:mt-11">
         {products?.slice(0, loadLength).map(product => (
           <div className="mt-5" key={product?.id}>
             <div className="flex justify-center flex-col p-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-10 rounded-lg mx-3 relative trandingBox">

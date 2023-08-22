@@ -5,8 +5,13 @@ import { AiOutlineClose, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import delivery from '../../assets/image/delivery.png'
 import cash from '../../assets/image/cash.png'
 import pay from '../../assets/image/paywith.png'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, removeQuantity } from '../../Redux/features/cart/cartSlice'
 
 const DetailModal = ({ product, setProduct }) => {
+  const dispatch = useDispatch()
+  const { products } = useSelector(state => state.cart)
+  const porductQ = products.find(p => p.id === product.id)
   return (
     <div className="z-30 fixed w-screen h-screen top-0 left-0 flex items-center justify-center bg-[#00000088]">
       <div className="w-[800px]  max-w-full bg-white p-5 rounded-md relative">
@@ -19,21 +24,29 @@ const DetailModal = ({ product, setProduct }) => {
         </div>
         {/* close button end */}
         <div className="flex flex-col md:flex-row  gap-5">
-          <div className="">
-            <img src={product?.image} alt="" />
+          <div className="flex justify-center">
+            <img className="md:w-full w-20" src={product?.image} alt="" />
           </div>
           <div className="">
-            <h2 className="text-[25px] font-bold">{product?.title}</h2>
+            <h2 className="md:text-[25px] md:text-left text-center font-bold">
+              {product?.title}
+            </h2>
 
-            <h3 className="text-[25px] font-bold text-[#444444] my-4">
+            <h3 className="md:text-[25px] md:text-left text-center font-bold text-[#444444] my-4">
               ৳{product?.price}
             </h3>
             <div className=" border-b pb-5">
               <div className="flex-col md:flex-row flex items-center w-full gap-3 ">
                 <div className="flex items-center text-5xl border justify-between w-[250px]">
-                  <AiOutlineMinus className="bg-[#00000021] p-2 cursor-pointer" />
-                  <span>0</span>
-                  <AiOutlinePlus className="bg-[#00000021] p-2 cursor-pointer" />
+                  <AiOutlineMinus
+                    onClick={() => dispatch(removeQuantity(product))}
+                    className="bg-[#00000021] p-2 cursor-pointer"
+                  />
+                  <span>{porductQ?.quantity ? porductQ?.quantity : 0}</span>
+                  <AiOutlinePlus
+                    onClick={() => dispatch(addToCart(product))}
+                    className="bg-[#00000021] p-2 cursor-pointer"
+                  />
                 </div>
                 <div className="">
                   <button className="w-[150px] py-3 bg-[#FB7679] text-white">
@@ -45,8 +58,8 @@ const DetailModal = ({ product, setProduct }) => {
           </div>
         </div>
 
-        <div className="mt-5 flex justify-between">
-          <div className="flex gap-4">
+        <div className="mt-5 flex md:flex-row flex-col justify-between">
+          <div className="flex md:flex-row flex-col items-center md:gap-4">
             <p className="flex items-center">
               <img src={delivery} alt="" />
               <span>30 minute delivery</span>

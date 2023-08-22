@@ -16,7 +16,11 @@ export const CartSlice = createSlice({
       if (existing) {
         existing.quantity = existing.quantity + 1
       } else {
-        state.products.push({ ...action.payload, quantity: 1 })
+        state.products.push({
+          ...action.payload,
+          quantity: 1,
+          stock: action.payload.stock - 1,
+        })
       }
       state.totall = state.totall + action.payload.price
     },
