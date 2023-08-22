@@ -25,7 +25,7 @@ const Navbar = () => {
       <li className="border-b lg:border-none border-green-500 p-1">
         <NavLink
           className={({ isActive }) =>
-            isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+            isActive ? 'text-[#069938] navItem' : ' '
           }
           to="/"
         >
@@ -35,7 +35,7 @@ const Navbar = () => {
       <li className="border-b lg:border-none border-green-500 p-1">
         <NavLink
           className={({ isActive }) =>
-            isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+            isActive ? 'text-[#069938] navItem' : ' '
           }
           to="/about"
         >
@@ -45,7 +45,7 @@ const Navbar = () => {
       <li className="border-b lg:border-none border-green-500 p-1">
         <NavLink
           className={({ isActive }) =>
-            isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+            isActive ? 'text-[#069938] navItem' : ' '
           }
           to="/product/laptop"
         >
@@ -55,7 +55,7 @@ const Navbar = () => {
       <li className="border-b lg:border-none border-green-500 p-1">
         <NavLink
           className={({ isActive }) =>
-            isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+            isActive ? 'text-[#069938] navItem' : ' '
           }
           to="/contact"
         >
@@ -65,9 +65,7 @@ const Navbar = () => {
       <li className="border-b lg:border-none border-green-500 p-1">
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? 'text-[#069938] border-b-2 border-[#FF9D1E] relative'
-              : 'relative '
+            isActive ? 'text-[#069938] navItem relative' : 'relative '
           }
           to="cart"
         >
@@ -82,7 +80,7 @@ const Navbar = () => {
           <button
             onClick={() => singOutHandler()}
             className={({ isActive }) =>
-              isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+              isActive ? 'text-[#069938] navItem' : ' '
             }
           >
             Log Out
@@ -90,7 +88,7 @@ const Navbar = () => {
         ) : (
           <NavLink
             className={({ isActive }) =>
-              isActive ? 'text-[#069938] border-b-2 border-[#FF9D1E]' : ' '
+              isActive ? 'text-[#069938] navItem' : ' '
             }
             to="/login"
           >

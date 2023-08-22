@@ -15,13 +15,19 @@ const Cart = () => {
   const { products, totall } = useSelector(state => state.cart)
   const dispatch = useDispatch()
 
+  //
+  let Discount = totall * 0.04
+  let vat = totall * 0.08
   let DeliveryCharge = 120
+
   if (totall >= 500 && totall <= 1000) {
     DeliveryCharge = 120 / 2
   }
   if (totall >= 1000) {
     DeliveryCharge = 0
   }
+
+  let totalPrice = vat + totall + DeliveryCharge - Discount
 
   return (
     <div className="container mx-auto md:px-0 px-4">
@@ -75,16 +81,16 @@ const Cart = () => {
               <span>Sub Total</span> <span>{totall}</span>
             </p>
             <p className="flex justify-between">
-              <span>Discount</span> <span>0</span>
+              <span>Discount</span> <span>{Discount.toFixed(2)}</span>
             </p>
             <p className="flex justify-between">
-              <span>VAT</span> <span>0</span>
+              <span>VAT</span> <span>{vat.toFixed(0)}</span>
             </p>
             <p className="flex justify-between">
               <span>Delivery Charge</span> <span>{DeliveryCharge}</span>
             </p>
             <p className="flex justify-between">
-              <span>TOTAL</span> <span>0</span>
+              <span>TOTAL</span> <span>{totalPrice.toFixed(2)}</span>
             </p>
           </div>
           <button className="text-white uppercase bg-[#000000] mt-5 w-full rounded-md py-1">

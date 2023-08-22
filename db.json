@@ -27,7 +27,7 @@
     {
       "id": "4",
       "category": "Television",
-      "title": "Samsung LED Television",
+      "title": "Samsung LED Television 1",
       "price": 120,
       "stock": 10,
       "image": "../src/assets/image/Rectangle 20.png"
@@ -36,7 +36,7 @@
     {
       "id": "5",
       "category": "laptop",
-      "title": "Dell Inspiron Laptop",
+      "title": "Dell Inspiron Laptop 1",
       "price": 120,
       "stock": 10,
       "image": "../src/assets/image/Rectangle 22.png"
@@ -44,14 +44,14 @@
     {
       "id": "6",
       "category": "Phone",
-      "title": "iPhone 14 pro max",
+      "title": "iPhone 14 pro max 1",
       "price": 120,
       "stock": 10,
       "image": "../src/assets/image/Rectangle 18.png"
     },
     {
       "id": "7",
-      "category": "Headphone",
+      "category": "Headphone 1",
       "title": "Headphone JBL",
       "price": 120,
       "stock": 10,
@@ -59,11 +59,75 @@
     },
     {
       "id": "8",
-      "category": "Television",
+      "category": "Television 1",
       "title": "Samsung LED Television",
       "price": 120,
       "stock": 10,
       "image": "../src/assets/image/Rectangle 20.png"
+    },
+    {
+      "id": "9",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 2",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "10",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 3",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "11",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 4",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "13",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 6",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "14",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 7",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "15",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 8",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "16",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 9",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
+    },
+    {
+      "id": "17",
+      "category": "laptop",
+      "title": "Dell Inspiron Laptop 10",
+      "price": 120,
+      "stock": 10,
+      "image": "../src/assets/image/Rectangle 22.png"
     }
   ]
 }

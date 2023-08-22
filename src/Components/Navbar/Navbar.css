@@ -1,3 +1,15 @@
-.navbar {
-  /* z-index: ; */
+.navItem {
+  position: relative;
+  overflow: hidden;
+}
+.navItem::before {
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0px;
+  width: 70%;
+  border-radius: 15px;
+  height: 4px;
+  background-color: #ff9d1e;
 }

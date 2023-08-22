@@ -9,7 +9,7 @@ import heart from '../../assets/image/heart 1.png'
 
 const NewProduct = () => {
   useEffect(() => {
-    window.scrollTo(0, 300)
+    window.scrollTo(0, 0)
   }, [])
 
   const navigate = useNavigate()
@@ -21,11 +21,9 @@ const NewProduct = () => {
   const { category } = useParams()
 
   const [product, setProduct] = useState()
-  const [loadLength, setLoadLength] = useState(2)
+  const [loadLength, setLoadLength] = useState(4)
 
-  const products = data
-    ?.filter(item => item.category === category)
-    .slice(0, loadLength)
+  const products = data?.filter(item => item.category === category)
 
   const modalHandler = produc => {
     if (!user?.uid) {
@@ -93,7 +91,7 @@ const NewProduct = () => {
       </div>
       {/* menu end */}
 
-      {products.length == 0 && (
+      {products?.length == 0 && (
         <div className="">
           <h1 className="text-3xl py-[100px] text-center">
             have not product this category
@@ -101,7 +99,7 @@ const NewProduct = () => {
         </div>
       )}
       <div className="grid grid-cols-4">
-        {products?.map(product => (
+        {products?.slice(0, loadLength).map(product => (
           <div className="mt-5" key={product?.id}>
             <div className="flex justify-center flex-col p-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-10 rounded-lg mx-3 relative trandingBox">
               <img src={product?.image} alt="" />
@@ -138,6 +136,17 @@ const NewProduct = () => {
           </div>
         ))}
       </div>
+
+      <div className="flex justify-center">
+        <button
+          disabled={products?.length <= loadLength}
+          onClick={() => setLoadLength(loadLength + 4)}
+          className="text-lg  w-24 py-2 bg-[#069938] rounded-md text-white font-bold"
+        >
+          See More
+        </button>
+      </div>
+
       {product && <DetailModal product={product} setProduct={setProduct} />}
     </div>
   )

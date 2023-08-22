@@ -20,7 +20,7 @@ const PopularCategory = () => {
         <div className="">
           <div className="py-[77px] bg-[#6AC4D8] flex flex-col justify-center items-center relative rounded-lg box box">
             <div className="absolute top-6 right-6 text-white">
-              <Link to="product/Laptop">
+              <Link to="product/laptop">
                 <BsArrowRight className="text-5xl rounded-full  cursor-pointer duration-300 p-2 icone" />
               </Link>
             </div>

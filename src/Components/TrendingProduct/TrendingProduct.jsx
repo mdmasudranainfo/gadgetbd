@@ -73,15 +73,15 @@ const TrendingProduct = () => {
   }
 
   return (
-    <div className="container mx-auto mt-[96px]">
+    <div className="container mx-auto md:mt-[96px] mt-10">
       <h1 className="md:text-[35px] text-lg font-bold text-center">
-        TrendingProduct
+        Trending Product
       </h1>
       {/* card  start*/}
 
-      <div className="trandingSlider mt-12 mb-[100px]">
+      <div className="trandingSlider md:mt-12 mt-5 mb-[100px]">
         <Slider {...settings}>
-          {products?.map(product => (
+          {products?.slice(0, 8)?.map(product => (
             <div className="mt-5" key={product?.id}>
               <div className="flex justify-center flex-col p-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-10 rounded-lg mx-3 relative trandingBox">
                 <img src={product?.image} alt="" />
