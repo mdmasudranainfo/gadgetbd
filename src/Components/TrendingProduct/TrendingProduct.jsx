@@ -5,18 +5,17 @@ import './TrendingProduct.css'
 import heart from '../../assets/image/heart 1.png'
 import { useContext, useState } from 'react'
 import DetailModal from '../DetailModal/DetailModal'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addToCart } from '../../Redux/features/cart/cartSlice'
 import { AuthContext } from '../../Contaxt/UserContext'
 import { useNavigate } from 'react-router-dom'
 
 const TrendingProduct = () => {
   const { data: products } = useGetTrendingProductQuery(undefined)
-  const cartProduct = useSelector(state => state.cart.products)
+
   const [product, setProduct] = useState()
   const { user } = useContext(AuthContext)
   const navigate = useNavigate()
-
   const dispatch = useDispatch()
 
   const modalHandler = produc => {
@@ -98,7 +97,6 @@ const TrendingProduct = () => {
 
                   <div className="text-[18px] font-bold flex justify-between mt-[18px] mb-[23px]">
                     <p>Price: {product?.price}</p>
-                    {/* <p>{cartProduct?.find(p => p?.id === product?.id)}</p> */}
 
                     <p>Quantity: {product?.stock}</p>
                   </div>
