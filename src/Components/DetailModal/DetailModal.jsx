@@ -33,7 +33,7 @@ const DetailModal = ({ product, setProduct }) => {
             </h2>
 
             <h3 className="md:text-[25px] md:text-left text-center font-bold text-[#444444] my-4">
-              ৳{product?.price}৳{porductQ?.stock}
+              ৳{product?.price}
             </h3>
             <div className=" border-b pb-5">
               <div className="flex-col md:flex-row flex items-center w-full gap-3 ">
