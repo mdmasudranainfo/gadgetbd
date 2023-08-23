@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import { AiOutlineClose, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import {
+  // AiFillPhone,
+  AiOutlineClose,
+  AiOutlineMinus,
+  AiOutlinePlus,
+} from 'react-icons/ai'
 
 import delivery from '../../assets/image/delivery.png'
 import cash from '../../assets/image/cash.png'
 import pay from '../../assets/image/paywith.png'
+// import playstore from '../../assets/image/playstore.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeQuantity } from '../../Redux/features/cart/cartSlice'
 
@@ -73,6 +79,33 @@ const DetailModal = ({ product, setProduct }) => {
             <img src={pay} alt="" />
           </div>
         </div>
+
+        {/* <div className="flex mt-10">
+          <div className="w-[60%] gap-4">
+            <p className="text-[#615E58]">
+              Gadget BD.com is an online shop available in Dhaka, Chattogram and
+              Jashore. We believe time is valuable to our fellow residents, and
+              that they should not have to waste hours in traffic, brave bad
+              weather and wait in line just to buy basic necessities like eggs!
+              This is why Gadget BD delivers everything you need right at your
+              door-step and at no additional cost.
+            </p>
+          </div>
+          <div className="">
+            <div className="">
+              <div className="flex justify-between gap-4">
+                <img src={playstore} alt="" />
+                <img src={playstore} alt="" />
+              </div>
+              <div className="flex items-end flex-col mt-5">
+                <p className="text-[25px] flex items-center gap-1 text-[#615E58]">
+                  <AiFillPhone /> <span>16710</span>
+                </p>
+                <p className="text-[#615E58]">or support@chaldal.com</p>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   )

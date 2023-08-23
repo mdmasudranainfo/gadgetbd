@@ -39,6 +39,7 @@ export const CartSlice = createSlice({
       )
       if (existing && existing.quantity > 1) {
         existing.quantity = existing.quantity - 1
+        existing.stock = existing.stock < 1 ? 0 : existing.stock + 1
         state.totall = state.totall - action.payload.price
       } else {
         // state.products = state.products.filter(

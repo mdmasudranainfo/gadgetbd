@@ -20,10 +20,9 @@ const ProductCard = ({ product, setProduct }) => {
 
   const { products } = useSelector(state => state.cart)
   const porductQ = products.find(p => p.id === product.id)
-  console.log(porductQ?.stock)
 
   return (
-    <div className="mt-5" key={product?.id}>
+    <div className="mt-5">
       <div className="flex justify-center flex-col p-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-7 rounded-lg mx-3 relative trandingBox">
         <img src={product?.image} alt="" />
 
@@ -40,11 +39,16 @@ const ProductCard = ({ product, setProduct }) => {
             <p>Price: {product?.price}</p>
             <p>
               Quantity:
-              {porductQ?.stock
-                ? porductQ?.stock <= 1
-                  ? '0'
-                  : porductQ?.stock
-                : product?.stock}
+              {(() => {
+                let stock = typeof porductQ?.stock
+
+                switch (stock) {
+                  case 'undefined':
+                    return product?.stock
+                  default:
+                    return porductQ?.stock
+                }
+              })()}
             </p>
           </div>
           <div className=" flex justify-between">
